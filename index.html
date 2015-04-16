@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://idfg.idaho.gov/apple-touch-icon-152x152.png" />
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="all" rel="stylesheet" />
     <link href="https://idfg.idaho.gov/sites/all/themes/bootstrap/css/overrides.css" media="all" rel="stylesheet" />
-    <link href="https://idfg.idaho.gov/sites/all/themes/bison/css/state-idfg.css" media="all" rel="stylesheet" />
+    <link href="https://idfg.idaho.gov/sites/all/themes/bison/css/bison.css" media="all" rel="stylesheet" />
     <script src="js/modernizr-2.7.1.js"></script>
   </head>
   <body class="html">
@@ -355,28 +355,18 @@
         <div id="footer_bottom" class="row">
           <div class="col-xs-12">
             <!--/row-->
-           <script>
-  Modernizr.load([
-    {
-      load: [
-        'https://code.jquery.com/jquery-1.11.2.min.js',
-        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
-        'js/bootstrap-accessibility.min.js',
-        'js/custom.js',
-        'js/video.js',
-        'js/jquery.fitvids.js'
-      ]
-    },
-    {
-      test: Modernizr.mq('only all'), nope: [
-        'js/respond.min.js'
-      ]
-    }
-  ]);
-</script> 
           </div>
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/video.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#block-idfg-components-menu').load('//fishandgame.idaho.gov/ifwis/rest/services/web/site/menu/1.bootstrap');
+      });
+    </script>
   </body>
 </html>
