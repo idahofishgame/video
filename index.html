@@ -153,7 +153,7 @@
       <div class="row">
         <section class="col-sm-12">
           <a id="main-content"></a>
-          <h1 class="page-header">Videos by Idaho Fish &amp; Game</h1>
+          <h2 class="page-header"><small><a href="https://www.youtube.com/user/idahofishgame" title="Visit our YouTube Channel"><img src="/ifwis/inc/icons/socialmedia/24x24/youtube.png" alt="YouTube Icon"/></a> Idaho Fish &amp; Game YouTube Channel</small></h2>
         </section>
       </div>
       <div class="row">
@@ -167,18 +167,26 @@
       </div>
       <div class="row">
         <div class="col-sm-3 sidenav" id="videotabs">
-          <h3>Playlists</h3>
-          <ul class="nav nav-pills nav-stacked">
-            <!--<li class="active">
-              <a href="#recent">Recent</a>
-            </li>-->
-          </ul>
+          <header><div class="header-context"><h3>Playlists</h3></div></header>
+          <div class="navbar navbar-context">
+            <div class="navbar-inner">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".context-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="brand"><h2>Video Playlists</h2></span>
+              <div class="collapse navbar-collapse context-nav">
+                <ul id="playlists" class="nav nav-pills nav-stacked"></ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="playlist-content" class="col-sm-9">
         <img src="http://fishandgame.idaho.gov/ifwis/images/loading.gif" alt="loading..." /> Loading Video Playlist...</div>
       </div>
       <div class="row" style="margin-top:20px">
-        <section class="col-sm-6">
+        <section class="col-md-offset-3 col-sm-6">
           <div class="alert alert-info">
             <h4>Catch the Next Video Release!</h4>
             <ul>
@@ -361,7 +369,7 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
-    <script src="js/video.js?q=1"></script>
+    <script src="js/video.js"></script>
     <script>
       $(document).ready(function(){
         $('#block-idfg-components-menu').load('//fishandgame.idaho.gov/ifwis/rest/services/web/site/menu/1.bootstrap');

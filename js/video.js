@@ -78,18 +78,16 @@ function loadVideo(videoid, autoplay) {
   var url = 'https://gdata.youtube.com/feeds/api/videos/' + videoid + '?v=2&alt=jsonc&rel=0&callback=?';
   $.getJSON(url, function (response) {
     if (response) {	
-			if (response.data.uploader == 'idahofishgame') {
-				$("#playingvideo").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoid + '?rel=0" frameborder="0" allowfullscreen></iframe>');
-        $("#playinginfo").html('<h3>' + response.data.title + '</h3>' + response.data.description);
-        $("#playingvideo").fitVids();
-			} else {
-				$("#playingvideo").html('<div class="panel-body alert alert-warning"><h2>External Content</h2><h3>' + response.data.title + '</h3><p>This video was not uploaded by Idaho Fish and Game.  Please watch this video on YouTube.</p><a class="btn btn-primary" role="button" href="https://www.youtube.com/watch?v=' + videoid + '">Watch on YouTube</a></div>');
-			}
+			// May want to add test here for if (response.data.uploader == 'idahofishgame') {
+      // but many of the videos in our playlists are not ours so this restriction was removed.
+			$("#playingvideo").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoid + '?rel=0" frameborder="0" allowfullscreen></iframe>');
+      $("#playinginfo").html('<h3>' + response.data.title + '</h3>' + response.data.description);
+      $("#playingvideo").fitVids();
 		} else {
       $("#playingvideo").html('<div class="panel-body"><h2>Bad Url or Response</h2><p>This video could not be played.</p></div>');
     }
 	});
-	scrollTo(0,300);
+	scrollTo(0,180);
 }
 
 $(document).ready(function () {
@@ -98,8 +96,10 @@ $(document).ready(function () {
 	});
   $("#videotabs .nav").on('click', 'a', function() {
     getPlaylistVideosById($(this).attr("id"));
+    $("#playlists li").removeClass('active');
+    $(this).parent('li').addClass('active');
 	});
-  // loadrecent(); //Loads the Recent video playlists. 
-  var defaultPlaylist = 'FLUdrx_nZUNlfrGVsc2cj9Gg';  // Favorites Playlist
+  // loadrecent(); // DEPRECATED: Loads Recent videos. 
+  var defaultPlaylist = 'FLUdrx_nZUNlfrGVsc2cj9Gg';  // Favorites Playlist.
   populateTabsFromJSON(defaultPlaylist);
 });
