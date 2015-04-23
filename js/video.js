@@ -2,8 +2,8 @@
  * Loads all the videos for a given playlist.
  */
 function getPlaylistVideosById(thisid) {
-	var thispanels;
-	var url = "https://gdata.youtube.com/feeds/api/playlists/" + thisid + "?v=2&alt=jsonc&rel=0&callback=?";
+  var thispanels;
+  var url = "https://gdata.youtube.com/feeds/api/playlists/" + thisid + "?v=2&alt=jsonc&rel=0&callback=?";
   $.getJSON(url, function (response) {
     if (response) {
       $.each(response.data.items, function (ii, item) {
@@ -53,7 +53,7 @@ function loadRecent() {
  * Loads list of all video channels to nav.
  */
 function populateTabsFromJSON(defaultPlaylist) {
-	var url = "http://gdata.youtube.com/feeds/api/users/idahofishgame/playlists?v=2&alt=jsonc&callback=?";  // Playlists by Username
+  var url = "https://gdata.youtube.com/feeds/api/users/idahofishgame/playlists?v=2&alt=jsonc&callback=?";  // Playlists by Username
   $.getJSON(url, function (response) {
     if (response) {
       $.each(response.data.items, function (i, item) {
