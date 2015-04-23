@@ -113,4 +113,8 @@ $(document).ready(function () {
     defaultPlaylist = location.href.substring(location.href.indexOf("#PL")+1);
   }
   populateTabsFromJSON(defaultPlaylist);
+	$("#context-menu-dropdown").click( function() {
+	  $("#context-menu-dropdown .glyphicon").toggleClass("glyphicon-chevron-down");
+		$("#context-menu-dropdown .glyphicon").toggleClass("glyphicon-chevron-up");
+	});
 });
