@@ -104,6 +104,9 @@ $(document).ready(function () {
     $(this).parent('li').addClass('active');
 	});
   // loadrecent(); // DEPRECATED: Loads Recent videos. 
-  var defaultPlaylist = 'FLUdrx_nZUNlfrGVsc2cj9Gg';  // Favorites Playlist.
+	var defaultPlaylist = 'FLUdrx_nZUNlfrGVsc2cj9Gg';  // Favorites Playlist.
+	if (location.href.indexOf("#PL") != -1) {
+    defaultPlaylist = location.href.substring(location.href.indexOf("#PL")+1);
+  }
   populateTabsFromJSON(defaultPlaylist);
 });
