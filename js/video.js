@@ -11,7 +11,11 @@ function getPlaylistVideosById(thisid) {
         $.each(response.data.items, function (i, item) {
           thispanels += '<div class="media"><div class="media-left"><a class="videolink videothumb" href="#video-' + item.video.id + '" title="Watch Video"><img class="media-object"   alt="Watch Video" src="img/video-play.png" style="background-image:url(' + item.video.thumbnail.sqDefault + ');" width="120" height="90" /></a></div><div class="media-body"><h4 class="media-heading"><a class="videolink" href="#video-' + item.video.id + '" title="Watch Video">' + item.video.title + '</a></h4>' + item.video.description + '<div class="text-muted">Duration ' + Math.floor(item.video.duration/60) + ':' + item.video.duration % 60 + '&nbsp; Views ' + item.video.viewCount + '&nbsp; Released ' + item.video.uploaded.substring(0,10) + '</div></div></div>';
           if (i == 0 && ii ==0) {
-            loadVideo(item.video.id, 0);
+					  if (location.href.indexOf("#video-") != -1) {
+    					loadVideo(location.href.substring(location.href.indexOf("#video-")+7), 1);
+						} else {
+							loadVideo(item.video.id, 0);
+						}
           }
         });
         $("#playlist-content").html(thispanels + '');
