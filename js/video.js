@@ -101,7 +101,7 @@ function renderVideo(videoId, display) {
 
 $(document).ready(function () {
   $("#playlist-content").on('click', 'a.video-title', function() {
-    loadVideo($(this).attr("href").substring($(this).attr("href").indexOf("#video-")+7), false);
+    renderVideo($(this).attr("href").substring($(this).attr("href").indexOf("#video-")+7), false);
 	});
   $("#videotabs .nav").on('click', 'a', function() {
     getPlaylistVideosById($(this).attr("id"));
