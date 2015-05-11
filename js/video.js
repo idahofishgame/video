@@ -8,8 +8,9 @@ function getPlaylistVideosById(playlistId) {
   $.getJSON(url, function (response) {
     if (response) {
 		  $("#playlist-content").html("<h3>" + $('#' + playlistId).html() + " Playlist</h3>");
+      $("#playlist-title").html($('#' + playlistId).html() + " Playlist");
       $.each(response.items, function (i, item) {
-        $("#playlist-content").append("<div id=\"" + item.snippet.resourceId.videoId + "\" class=\"media\"><div class=\"media-left\"><a class=\"videolink videothumb\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\"><img class=\"media-object\" alt=\"Watch Video\" src=\"img/video-play.png\" style=\"background-image:url(" + item.snippet.thumbnails.default.url + ");\" width=\"120\" height=\"90\" /></a></div><div class=\"media-body\"><h4 class=\"media-heading\"><a class=\"video-title\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\">" + item.snippet.title + "</a></h4><div class=\"video-description\">" + item.snippet.description + "</div></div></div>");
+        $("#playlist-content").append("<div id=\"" + item.snippet.resourceId.videoId + "\" class=\"media\"><div class=\"media-left\"><a class=\"videolink videothumb\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\"><img class=\"media-object\" alt=\"Watch Video\" src=\"images/video-play.png\" style=\"background-image:url(" + item.snippet.thumbnails.default.url + ");\" width=\"120\" height=\"90\" /></a></div><div class=\"media-body\"><h4 class=\"media-heading\"><a class=\"video-title\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\">" + item.snippet.title + "</a></h4><div class=\"video-description\">" + item.snippet.description + "</div></div></div>");
         if (i == 0) {
 	  	    if (location.href.indexOf("#video-") != -1) {
       		  videoId = location.href.substring(location.href.indexOf("#video-")+7);
@@ -66,7 +67,7 @@ function populateTabsFromJSON(defaultPlaylist) {
       });
       // Render videos.
 			for (i=0;i<byWeight.length;i++) {
-			  $("#videotabs .nav").append(byWeight[i]['display']);
+			  $("#video-tabs .nav").append(byWeight[i]['display']);
 			}
       getPlaylistVideosById(defaultPlaylist);
     }
@@ -90,20 +91,25 @@ function checkVideo(videoId) {
 
 function renderVideo(videoId, display) {
   if (display) {
-    $("#playingvideo").html("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoId + "?rel=0\" frameborder=\"0\" allowfullscreen></iframe>");
-    $("#playinginfo").html("<h3>" + $("#" + videoId + " .video-title").text() + '</h3>' + $("#" + videoId + " .video-description").html());
-    $("#playingvideo").fitVids();
+    $("#video-player").html("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoId + "?rel=0\" frameborder=\"0\" allowfullscreen></iframe>");
+    $("#video-title").html($("#" + videoId + " .video-title").text());
+    $("#video-description").html($("#" + videoId + " .video-description").html());
+    $("#video-player").fitVids();
   } else {
-    $("#playingvideo").html("<div class=\"panel-body\"><div class=\"alert alert-warning\"><h2>Video Not Found</h2><p>This video does not exist in the Idaho Fish and Game YouTube playlist.</p></div></div>");
+    $("#video-title").html("Fish &amp; Game Video");
+    $("#video-player").html("<div class=\"panel-body\"><div class=\"alert alert-warning\"><h2>Video Not Found</h2><p>This video does not exist in the Idaho Fish and Game YouTube playlist.</p></div></div>");
   }
-	scrollTo(0,180);
+  var p = $("#page-header");
+  var o = p.offset();
+  console.log(o.top);
+  scrollTo(0,o.top);
 }
 
 $(document).ready(function () {
   $("#playlist-content").on('click', 'a.video-title', function() {
     renderVideo($(this).attr("href").substring($(this).attr("href").indexOf("#video-")+7), true);
 	});
-  $("#videotabs .nav").on('click', 'a', function() {
+  $("#video-tabs .nav").on('click', 'a', function() {
     getPlaylistVideosById($(this).attr("id"));
     $("#playlists li").removeClass('active');
     $(this).parent('li').addClass('active');
