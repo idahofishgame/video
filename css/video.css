@@ -1,11 +1,10 @@
 /* Mobile */
-.navbar-context li.active { background-color: #F5F5F5; color:#333; }
 /* Context */
 .navbar-context { background-color: #678482; }
 
 /* Desktop */
 @media (min-width: 768px) {
-  /* Header Context */
+  /* Context */
   #page-header { background-color: #678482; }
   #page-header .region { background-color: #678482; }
 }
