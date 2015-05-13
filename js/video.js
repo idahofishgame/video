@@ -101,7 +101,6 @@ function renderVideo(videoId, display) {
   }
   var p = $("#page-header");
   var o = p.offset();
-  console.log(o.top);
   scrollTo(0,o.top);
 }
 
@@ -113,6 +112,9 @@ $(document).ready(function () {
     getPlaylistVideosById($(this).attr("id"));
     $("#playlists li").removeClass('active');
     $(this).parent('li').addClass('active');
+    if($('#context-menu-dropdown').css('display') !='none'){
+            $("#context-menu-dropdown").trigger( "click" );
+        }
 	});
 	var defaultPlaylist = "PL622AC92E518CB04A"; // Featured Playlist.
 	if (location.href.indexOf("#PL") != -1) {
