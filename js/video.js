@@ -99,7 +99,7 @@ function renderVideo(videoId, display) {
     $("#video-title").html("Fish &amp; Game Video");
     $("#video-player").html("<div class=\"panel-body\"><div class=\"alert alert-warning\"><h2>Video Not Found</h2><p>This video does not exist in the Idaho Fish and Game YouTube playlist.</p></div></div>");
   }
-  var p = $("#page-header");
+  var p = $(".main-container");
   var o = p.offset();
   scrollTo(0,o.top);
 }
