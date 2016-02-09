@@ -56,7 +56,7 @@ function populateTabsFromJSON(defaultPlaylist) {
 				  weight = "aa" + weight;
 				}
 				// Build playlist array with weighted titles.
-				playlists.push({"display":"<li" + attributes + "><a id=\"" + item.id + "\" href=\"#" + item.id + "\">" + item.snippet.title + "</a></li>", "weight":weight});
+				playlists.push({"display":"<li" + attributes + "><a id=\"" + item.id + "\" href=\"#" + item.id + "\" title=\"" + item.snippet.title + " Video Playlist\">" + item.snippet.title + "</a></li>", "weight":weight});
       });
 			// Now sort by Weight.
 			var byWeight = playlists.slice(0);
@@ -121,8 +121,4 @@ $(document).ready(function () {
     defaultPlaylist = location.href.substring(location.href.indexOf("#PL")+1);
   }
   populateTabsFromJSON(defaultPlaylist);
-	$("#context-menu-dropdown").click( function() {
-	  $("#context-menu-dropdown .glyphicon").toggleClass("glyphicon-chevron-down");
-		$("#context-menu-dropdown .glyphicon").toggleClass("glyphicon-chevron-up");
-	});
 });
