@@ -5,6 +5,6 @@
 /* Desktop */
 @media (min-width: 768px) {
   /* Context */
-  #page-header { background-color: #678482; }
-  #page-header .region { background-color: #678482; }
+  #page-header-context { background-color: #678482; }
+  #page-header-context .region { background-color: #678482; }
 }
