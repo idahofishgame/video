@@ -6,128 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fish and Game Video</title>
     <meta name="description" content="Videos from the Idaho Fish and Game Youtube Channel" />
-    <meta name="robots" content="index,follow" />
-    <meta name="DCTERMS.subject" content="video" />
-    <meta name="DCTERMS.creator" content="Idaho Fish and Game" />
-    <meta name="DCTERMS.created" content="2012-01-01" />
-    <meta name="DCTERMS.language" content="EN" />
-    <meta name="DCTERMS.publisher" content="State of Idaho" />
-    <meta name="DCTERMS.format" content="text/html" />
-    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-    <link rel="icon" href="https://idfg.idaho.gov/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="https://idfg.idaho.gov/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="https://idfg.idaho.gov/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="https://idfg.idaho.gov/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="https://idfg.idaho.gov/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="https://idfg.idaho.gov/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="https://idfg.idaho.gov/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="https://idfg.idaho.gov/apple-touch-icon-152x152.png" />
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="all" rel="stylesheet" />
-    <link href="https://idfg.idaho.gov/sites/all/themes/bootstrap/css/overrides.css" media="all" rel="stylesheet" />
-    <link href="https://idfg.idaho.gov/sites/all/themes/bison/css/bison.css" media="all" rel="stylesheet" />
+  <meta name="robots" content="index,follow">
+  <meta name="DCTERMS.subject" content="CSS examples">
+  <meta name="DCTERMS.creator" content="Idaho Fish and Game">
+  <meta name="DCTERMS.created" content="2015-04-01">
+  <meta name="DCTERMS.language" content="EN">
+  <meta name="DCTERMS.publisher" content="State of Idaho">
+  <meta name="DCTERMS.modified" content="2017-02-11">
+  <meta name="DCTERMS.format" content="text/html">
+  <link rel="schema.DCTERMS" href="https://purl.org/dc/terms/">
+  <link rel="icon" href="https://idfg.idaho.gov/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://idfg.idaho.gov/apple-touch-icon.png">
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all">
+    <link href="https://idfg.idaho.gov/sites/all/themes/bison/2.1/css/bison.min.css" media="all" rel="stylesheet" />
     <link href="css/video.css" media="all" rel="stylesheet" />
   </head>
   <body class="html">
     <div id="skip-link">
       <a href="#content" class="sr-only">Skip to main content</a>
     </div>
-    <div class="utilities row hidden-xs">
-      <div class="container">
-        <div class="tagline col-sm-6">
-          <div class="region region-utilities-first">
-            <section id="block-idfg-components-crumbs" class="block block-idfg-components clearfix">
-              <div id="idfg-breadcrumb-context">
-                <a href="http://www.idaho.gov/">Idaho</a> » <a href="http://fishandgame.idaho.gov/" title="Idaho Department of Fish and Game">Department of Fish and Game</a>
-              </div>
-            </section>
+<div class="utilities row hidden-xs">
+  <div class="container">
+    <div class="tagline col-sm-6">
+      <div class="region region-utilities-first">
+        <section id="block-idfg-components-crumbs" class="block block-idfg-components clearfix">
+          <div id="idfg-breadcrumb-context">
+            <a href="http://www.idaho.gov/">Idaho</a> &raquo; <a href="https://idfg.idaho.gov/" title="Idaho Department of Fish and Game">Department of Fish and Game</a>
           </div>
-        </div>
-        <div class="top_nav col-xs-12 col-sm-6">
-          <div class="region region-utilities-second">
-            <section id="block-idfg-components-search" class="block block-idfg-components clearfix">
-              <ul class="menu nav nav-pills navbar-right">
-                <li id="navbar-search-form"><form action="https://idfg.idaho.gov/search" id="idfg-site-search" method="get" class="form-inline hideSubmitButton-processed"><input class="form-control form-text" id="search" name="search" placeholder="Search" required="true" type="text"><button type="submit" class="btn glyphicon glyphicon-search"></button></form></li>
-                <li style="display: block;" id="navbar-login" class="accounts-login-link"><a href="https://idfg.idaho.gov/accounts" title="My Account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="link-text">My account</span></a></li>
-              </ul>
-            </section>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
-    <!--/utilities row-->
-    <header id="navbar" role="banner" class="navbar container navbar-default">
-      <div class="container">
-        <div class="region region-branding">
-          <section id="block-idfg-components-regions" class="block block-idfg-components clearfix">
-            <div id="idfgRegionMap">
-              <img alt="IDFG Regions" src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/RegionMap.gif"
-              title="Explore our Regions" usemap="#regions-imagemap" />
-            </div>
-            <map id="regions-imagemap" name="regions-imagemap">
-              <area alt="Region 1 - Panhandle" coords="8,8,19,9,18,25,28,36,18,36,15,36,10,34,8,35"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=163" shape="poly" title="Region 1 - Panhandle" />
-              <area alt="Region 2 - Clearwater" coords="8,33,16,36,26,36,35,40,31,53,24,55,17,53,11,56,11,51,6,46"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=164" shape="poly" title="Region 2 - Clearwater" />
-              <area alt="Region 3 - Southwest" coords="9,58,16,55,24,57,30,60,21,66,25,77,19,84,19,95,23,102,5,103,7,76,5,70,5,67"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=165" shape="poly" title="Region 3 - Southwest" />
-              <area alt="Region 4 - Magic Valley" coords="23,79,31,77,43,82,42,88,49,102,24,102,19,93,19,87,19,85"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=169" shape="poly" title="Region 4 - Magic Valley" />
-              <area alt="Region 5 - Southeast" coords="44,81,55,86,67,85,68,103,49,101,47,92,42,91,41,86"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=166" shape="poly" title="Region 5 - Southeast" />
-              <area alt="Region 6 - Upper Snake" coords="61,64,65,69,66,83,61,84,52,82,44,79,39,79,35,76,47,68,53,65"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=171" shape="poly" title="Region 6 - Upper Snake" />
-              <area alt="Region 7 - Salmon" coords="37,49,47,66,28,75,23,65,31,60,30,55"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=170" shape="poly" title="Region 7 - Salmon" />
-              <area alt="View list of all Regions" coords="0,0,90,111"
-              href="http://fishandgame.idaho.gov/public/about/offices/?getPage=52" shape="rect" title="View list of all Regions" />
-            </map>
+    <div class="top_nav col-xs-12 col-sm-6">
+      <div class="region region-utilities-second">
+        <section id="block-idfg-components-search" class="block block-idfg-components clearfix">
+          <ul class="menu nav nav-pills navbar-right">
+            <li id="navbar-search-form"><form action="https://idfg.idaho.gov/search" id="idfg-site-search" method="get" class="form-inline hideSubmitButton-processed"><input class="form-control form-text" id="search" name="search" placeholder="Search" required type="text"><button type="submit" class="btn glyphicon glyphicon-search"></button></form></li>
+            <li id="navbar-login" class="accounts-login-link"><a href="https://idfg.idaho.gov/accounts" title="My Account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="link-text">My account</span></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/utilities row-->
+<header id="navbar" role="banner" class="navbar container navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="logo navbar-btn pull-left" href="https://idfg.idaho.gov/" title="Home">
+        <img src="https://idfg.idaho.gov/sites/all/themes/bison/logo.png" alt="Home" />
+      </a> 
+      <a class="name navbar-brand" href="https://idfg.idaho.gov/" title="Home">Idaho Fish and Game</a> 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="accounts-login-link"><a class="hidden-lg btn btn-lg navbar-search navbar-mobile" href="https://idfg.idaho.gov/accounts/user?returnurl=/home" title="My Account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></span>
+      <a class="hidden-lg btn btn-lg navbar-search navbar-mobile" href="https://idfg.idaho.gov/search" title="Search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</header>
+<!--/header-->
+<div id="navfull" class="container">
+  <div class="row topnav">
+    <div class="navbar-primary navbar-collapse collapse">
+      <nav role="navigation">
+        <div class="region region-navigation">
+          <section id="block-idfg-components-menu" class="block block-idfg-components clearfix">
+            <ul class="menu nav navbar-nav">
+              <li class="first leaf active"><a href="/" class="active">Home</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/hunt/" title="Hunting">Hunting</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/fish/" title="Fishing">Fishing</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/licenses/" title="Licenses">Licenses</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/wildlife/" title="Wildlife">Wildlife</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/education/" title="Education">Education</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/media/" title="Media">Media</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/science/" title="Science">Science</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/enforce/" title="Enforcement">Enforcement</a></li>
+              <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://idfg.idaho.gov/public/about/" title="About Us">About</a></li>
+            </ul>
           </section>
         </div>
-        <div class="navbar-header">
-          <a class="logo navbar-btn pull-left" href="//fishandgame.idaho.gov/" title="Home">
-            <img src="https://idfg.idaho.gov/sites/all/themes/bison/logo.png" alt="Home" />
-          </a> 
-          <a class="name navbar-brand" href="//fishandgame.idaho.gov/" title="Home">Idaho Fish and Game</a> 
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <!--/header-->
-    <div id="navfull" class="row">
-      <div class="container topnav">
-        <div class="navbar-primary navbar-collapse collapse">
-          <nav role="navigation">
-            <div class="region region-navigation">
-              <section id="block-idfg-components-menu" class="block block-idfg-components clearfix">
-                <ul class="menu nav navbar-nav">
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/hunt/" title="Hunting">Hunting</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/fish/" title="Fishing">Fishing</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/licenses/" title="Licenses">Licenses</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/wildlife/" title="Wildlife">Wildlife</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/education/" title="Education">Education</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/media/" title="Media">Media</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/science/" title="Science">Science</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/enforce/" title="Enforcement">Enforcement</a></li>
-                  <li class="expanded dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://fishandgame.idaho.gov/public/about/" title="About Us">About Us</a></li>
-                  <li class="navbar-mobile active"><a href="http://fishandgame.idaho.gov/search/" title="Search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</a></li>
-                  <li class="navbar-mobile active accounts-login-link"><a href="https://idfg.idaho.gov/accounts/user" title="User Account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="link-text">My Account</span></a></li>
-                </ul>
-              </section>
-            </div>
-          </nav>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
+      </nav>
     </div>
-    <!--/navfull-->
+    <!-- /.navbar-collapse -->
+  </div>
+</div>
+<!--/navfull-->
     <div class="main-container container">
-      <header role="banner" id="page-header">
+      <header role="banner" id="page-header" class="row">
         <div class="region region-header">
           <div class="container">
             <h2 class="header-context"><a href="/is/media/video" title="Fish and Game Videos">Fish &amp; Game Video</a> <small id="playlist-title">IdahoFishGame YouTube Channel</small></h2>
@@ -176,7 +145,7 @@
               <li>
               <a href="http://www.youtube.com/user/idahofishgame">
                 <img src="/ifwis/inc/icons/television.png" alt="Television Icon" /> Subscribe on YouTube</a></li>
-              <li>
+              <!--<li>
                 <form class="center-block" action="//feedburner.google.com/fb/a/mailverify" method="post"
                 onsubmit="window.open(&#39;//feedburner.google.com/fb/a/mailverify?uri=idfgvideos&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
                   <input type="text" name="email" value="" placeholder="Your Email" />
@@ -184,164 +153,169 @@
                   <input type="hidden" name="loc" value="en_US" /> 
                   <input type="submit" value="Notify me of new videos" class="btn btn-primary btn-sm" />
                 </form>
-              </li>
+              </li>-->
             </ul>
           </div>
         </section>
       </div>
     </div>
-    <!--/main-container-->
-    <div id="footer_context" class="row">
-      <div class="col-xs-12">
-        <footer class="footer container">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="region region-footer-top">
-                <section id="block-idfg-components-apps" class="block block-idfg-components clearfix">
-                  <div id="idfgFooterImageLinks" class="clearfix">
-                    <div id="idfgFooterIcons">
-                      <div id="idfgFooterIconic">
-                        <div id="idfgFooterIconicTop">
-                        <a href="//www.youtube.com/user/idahofishgame" title="IDFG on YouTube">
-                          <img alt="YouTube Icon"
-                          src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/youtube.png"
-                          title="IDFG on YouTube" />
-                        </a> 
-                        <a href="//twitter.com/idfg" title="IDFG on Twitter">
-                          <img alt="Twitter Icon"
-                          src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/twitter.png"
-                          title="IDFG on Twitter" />
-                        </a></div>
-                        <div id="idfgFooterIconicBottom">
-                        <a href="//flickr.com/photos/idfg" title="IDFG on Flickr">
-                          <img alt="Flick Icon"
-                          src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/flickr.png"
-                          title="IDFG on Flickr" />
-                        </a> 
-                        <a href="https://fishandgame.idaho.gov/content/page/rss-feeds" title="RSS Feed">
-                          <img alt="RSS Icon" src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/rss.png"
-                          title="RSS" />
-                        </a></div>
-                      </div>
-                    </div>
-                    <div>
-                      <a href="https://id.outdoorcentral.us/" title="Buy your hunting and fishing licenses here!">
-                        <img alt="Take Me Fishing Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinySoldHere.png" />
-                      </a>
-                      <a href="https://id.outdoorcentral.us/" title="Buy your hunting and fishing licenses here!">Buy Licenses</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/ifwis/huntPlanner/" title="Plan your hunting trip!">
-                        <img alt="Hunt Planner Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHuntPlanner.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/ifwis/huntPlanner/" title="Plan your hunting trip!">Hunt Planner</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=30" title="Hunter education classes">
-                        <img alt="Hunter Education Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHuntEd.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=30" title="Hunter education classes">Hunter Ed</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/ifwis/fishingPlanner/" title="Plan your fishing trip!">
-                        <img alt="Fishing Planner Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyFishPlanner.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/ifwis/fishingPlanner/" title="Plan your fishing trip!">Fishing
-                      Planner</a>
-                    </div>
-                    <div>
-                      <a href="http://www.ifwf.org/" title="Idaho Fish and Wildlife Foundation">
-                        <img alt="Idaho Fish and Wildlife Foundation Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyIFWF.png" />
-                      </a>
-                      <a href="http://www.ifwf.org/" title="Idaho Fish and Wildlife Foundation">IFWF</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=106" title="Mandatory Hunt Report">
-                        <img alt="Mandatory Hunt Report Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHarvReport.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=106" title="Mandatory Hunt Report">Hunt Report</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/public/enforce/?getPage=142"
-                      title="Citizens Against Poaching 1-800-632-5999">
-                        <img alt="Citizens Against Poaching Icon"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyCAP.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/public/enforce/?getPage=142"
-                      title="Citizens Against Poaching 1-800-632-5999">Report Poaching</a>
-                    </div>
-                    <div>
-                      <a href="http://fishandgame.idaho.gov/public/about/volunteer/" title="Volunteer Reserve">
-                        <img alt="Volunteer Reserve"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyVolunteer.png" />
-                      </a>
-                      <a href="http://fishandgame.idaho.gov/public/about/volunteer/" title="Volunteer Reserve">Volunteer!</a>
-                    </div>
-                    <div>
-                      <a href="https://fishandgame.idaho.gov/ifwis/roadkill" title="Report a Wildlife Collision">
-                        <img alt="Report a Wildlife Collision"
-                        src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/ifwis_roadkill.png" />
-                      </a>
-                      <a href="https://fishandgame.idaho.gov/ifwis/roadkill" title="Report a Wildlife Collision">Report
-                      Roadkill</a>
-                    </div>
+<!--/main-container-->
+<div id="footer-context" class="container">
+  <div class="row">
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <div class="region region-footer-top">
+            <section id="block-idfg-components-apps" class="block block-idfg-components clearfix">
+              <div id="idfgFooterImageLinks" class="clearfix">
+                <div id="idfgFooterIcons">
+                  <div id="idfgFooterIconic">
+                    <div id="idfgFooterIconicTop">
+                    <a href="//www.youtube.com/user/idahofishgame" title="IDFG on YouTube">
+                      <img alt="YouTube Icon"
+                      src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/youtube.png"
+                      title="IDFG on YouTube" />
+                    </a> 
+                    <a href="//twitter.com/idfg" title="IDFG on Twitter">
+                      <img alt="Twitter Icon"
+                      src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/twitter.png"
+                      title="IDFG on Twitter" />
+                    </a></div>
+                    <div id="idfgFooterIconicBottom">
+                    <a href="//flickr.com/photos/idfg" title="IDFG on Flickr">
+                      <img alt="Flick Icon"
+                      src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/flickr.png"
+                      title="IDFG on Flickr" />
+                    </a> 
+                    <a href="https://fishandgame.idaho.gov/content/page/rss-feeds" title="RSS Feed">
+                      <img alt="RSS Icon" src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/rss.png"
+                      title="RSS" />
+                    </a></div>
                   </div>
-                </section>
-              </div>
-              <section id="block-idfg-components-terms" class="block block-idfg-components clearfix">
-                <div id="idfg-terms">
-                  <ul>
-                    <li>
-                      <a href="/public/about/contact/">Contact Us</a>
-                    </li>
-                    <li>
-                      <a href="/public/about/employment/">Employment</a>
-                    </li>
-                    <li>
-                      <a href="/public/about/volunteer/">Volunteer</a>
-                    </li>
-                    <li>
-                      <a href="/public/about/privacy/">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="/public/about/terms/">Terms and Conditions</a>
-                    </li>
-                    <li>&copy; 2015 Idaho Fish and Game</li>
-                  </ul>
                 </div>
-              </section>
-            </div>
-            <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2"></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12"></div>
-            </div>
+                <div>
+                  <a href="https://id.outdoorcentral.us/" title="Buy your hunting and fishing licenses here!">
+                    <img alt="Take Me Fishing Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinySoldHere.png" />
+                  </a>
+                  <a href="https://id.outdoorcentral.us/" title="Buy your hunting and fishing licenses here!">Buy Licenses</a>
+                </div>
+                <div>
+                  <a href="http://fishandgame.idaho.gov/ifwis/huntplanner/" title="Plan your hunting trip!">
+                    <img alt="Hunt Planner Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHuntPlanner.png" />
+                  </a>
+                  <a href="http://fishandgame.idaho.gov/ifwis/huntplanner/" title="Plan your hunting trip!">Hunt Planner</a>
+                </div>
+                <div>
+                  <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=30" title="Hunter education classes">
+                    <img alt="Hunter Education Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHuntEd.png" />
+                  </a>
+                  <a href="http://fishandgame.idaho.gov/public/hunt/?getPage=30" title="Hunter education classes">Hunter Ed</a>
+                </div>
+                <div>
+                  <a href="http://fishandgame.idaho.gov/ifwis/fishingplanner/" title="Plan your fishing trip!">
+                    <img alt="Fishing Planner Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyFishPlanner.png" />
+                  </a>
+                  <a href="http://fishandgame.idaho.gov/ifwis/fishingplanner/" title="Plan your fishing trip!">Fishing
+                  Planner</a>
+                </div>
+                <div>
+                  <a href="http://www.ifwf.org/" title="Idaho Fish and Wildlife Foundation">
+                    <img alt="Idaho Fish and Wildlife Foundation Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyIFWF.png" />
+                  </a>
+                  <a href="http://www.ifwf.org/" title="Idaho Fish and Wildlife Foundation">IFWF</a>
+                </div>
+                <div>
+                  <a href="https://idfg.idaho.gov/hunt/report" title="Mandatory Hunt Report">
+                    <img alt="Mandatory Hunt Report Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyHarvReport.png" />
+                  </a>
+                  <a href="https://idfg.idaho.gov/hunt/report" title="Mandatory Hunt Report">Hunt Report</a>
+                </div>
+                <div>
+                  <a href="https://idfg.idaho.gov/poacher"
+                  title="Citizens Against Poaching 1-800-632-5999">
+                    <img alt="Citizens Against Poaching Icon"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyCAP.png" />
+                  </a>
+                  <a href="https://idfg.idaho.gov/poacher"
+                  title="Citizens Against Poaching 1-800-632-5999">Report Poaching</a>
+                </div>
+                <div>
+                  <a href="https://idfg.idaho.gov/volunteer" title="Volunteer Reserve">
+                    <img alt="Volunteer Reserve"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/tinyVolunteer.png" />
+                  </a>
+                  <a href="https://idfg.idaho.gov/volunteer" title="Volunteer Reserve">Volunteer!</a>
+                </div>
+                <div>
+                  <a href="https://idfg.idaho.gov/species/roadkill" title="Report a Wildlife Collision">
+                    <img alt="Report a Wildlife Collision"
+                    src="https://idfg.idaho.gov/sites/all/modules/custom/idfg_components/images/ifwis_roadkill.png" />
+                  </a>
+                  <a href="https://idfg.idaho.gov/species/roadkill" title="Report a Wildlife Collision">Report
+                  Roadkill</a>
+                </div>
+              </div>
+            </section>
           </div>
-        </footer>
-        <!--/row-->
-        <div id="footer_bottom" class="row">
-          <div class="col-xs-12">
-            <!--/row-->
-          </div>
+          <section id="block-idfg-components-terms" class="block block-idfg-components clearfix">
+            <div id="idfg-terms">
+              <ul>
+                <li><a title="Contact us" href="https://idfg.idaho.gov/contact">Contact Us</a></li>
+                <li><a title="Jobs" href="https://idfg.idaho.gov/jobs">Employment</a></li>
+                <li><a title="Volunteer" href="https://idfg.idaho.gov/volunteer">Volunteer</a></li>
+                <li><a title="Privacy policy" href="https://idfg.idaho.gov/privacy">Privacy</a></li>
+                <li><a title="Terms and conditions" href="https://idfg.idaho.gov/terms">Terms</a></li>
+                <li><a title="Report a problem" href="https://idfg.idaho.gov/problem?uri=https://fishandgame.idaho.gov/ifwis/style/custom">Report Problem</a></li>
+                <li>&copy; Idaho Fish and Game</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12"></div>
         </div>
       </div>
+    </footer>
+    <!--/row-->
+    <div id="footer_bottom">
+      <div class="col-xs-12">
+        <!--/row-->
+      </div>
     </div>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://idfg.idaho.gov/sites/all/themes/bison/js/login-menu.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/video.js"></script>
+  </div>
+</div>
+<!--/row-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://idfg.idaho.gov/sites/all/themes/bison/2.1/js/login-menu.min.js"></script>
+    <script src="js/jquery.fitvids.min.js"></script>
+    <script src="js/video.min.js?c=20190821"></script>
+    <!-- HTML5 element support for IE6-8 -->
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+<script src="https://idfg.idaho.gov/global.js"></script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-427842-11', 'auto');
+  ga('send', 'pageview');
+</script>
   </body>
 </html>
