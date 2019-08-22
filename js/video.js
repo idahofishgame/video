@@ -1,4 +1,5 @@
-﻿/**
+﻿var defaultPlaylist = "PL622AC92E518CB04A"; // Featured Playlist.
+/**
  * Loads all the videos for a given playlist.
  */
 function getPlaylistVideosById(playlistId) {
@@ -7,8 +8,12 @@ function getPlaylistVideosById(playlistId) {
 	var url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=" + playlistId + "&key=AIzaSyCeIgHG1yOHGO1Im8oyWqbpwZMqM0dm_OU&callback=?";
   $.getJSON(url, function (response) {
     if (response) {
+      if (playlistId === defaultPlaylist) {
+        $("#playlist-content").html("<h3>Featured Videos</h3>");
+      } else {
 		  $("#playlist-content").html("<h3>" + $('#' + playlistId).html() + " Playlist</h3>");
       $("#playlist-title").html($('#' + playlistId).html() + " Playlist");
+      }
       $.each(response.items, function (i, item) {
         $("#playlist-content").append("<div id=\"" + item.snippet.resourceId.videoId + "\" class=\"media\"><div class=\"media-left\"><a class=\"videolink videothumb\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\"><img class=\"media-object\" alt=\"Watch Video\" src=\"images/video-play.png\" style=\"background-image:url(" + item.snippet.thumbnails.default.url + ");\" width=\"120\" height=\"90\" /></a></div><div class=\"media-body\"><h4 class=\"media-heading\"><a class=\"video-title\" href=\"#video-" + item.snippet.resourceId.videoId + "\" title=\"Watch Video\">" + item.snippet.title + "</a></h4><div class=\"video-description\">" + item.snippet.description + "</div></div></div>");
         if (i == 0) {
@@ -116,7 +121,6 @@ $(document).ready(function () {
             $("#context-menu-dropdown").trigger( "click" );
         }
 	});
-	var defaultPlaylist = "PL622AC92E518CB04A"; // Featured Playlist.
 	if (location.href.indexOf("#PL") != -1) {
     defaultPlaylist = location.href.substring(location.href.indexOf("#PL")+1);
   }
